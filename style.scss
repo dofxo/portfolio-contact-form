@@ -15,7 +15,8 @@
 
 
 body,
-h5 {
+h5,
+p {
   margin: 0;
 }
 
@@ -23,6 +24,7 @@ h5 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
 }
 
 #card {
@@ -32,20 +34,40 @@ h5 {
   border: 1px solid;
   padding: 10px 20px;
 
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    padding: 10px;
+
+  }
+
+
   .data-wrapper {
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    margin-block: 10px;
+
+    @media screen and (max-width: 500px) {
+
+      flex-direction: row;
+      gap: 5px;
+      align-items: start;
+    }
 
 
 
     h5 {
       font-size: 21px;
-      color: yellowgreen
+      color: yellowgreen;
+
+      @media screen and (max-width: 550px) {
+        font-size: 18px;
+      }
     }
 
     p {
+      max-width: 150px;
       line-break: auto;
       word-wrap: break-word;
       overflow-wrap: break-word;
